@@ -1,7 +1,6 @@
 import  React  from 'react';
 
-const Location = (props) => {
-    const city = props.city;
+const Location = ({city}) => {
     
     return( 
         <div>
