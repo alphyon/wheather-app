@@ -8,7 +8,7 @@ import {
     // SUN,
     // SNOW,
     // WINDY
-} from '../constants/wheater';
+} from '../../../constants/wheater';
 const WeatherData = () => (
     <div>
         <WeatherTemperature temperature={30} wheaterState={RAIN} />

@@ -8,7 +8,7 @@ import {
     SUN,
     SNOW,
     WINDY
-} from '../constants/wheater';
+} from '../../../constants/wheater';
 const stateIconName = wheaterState => {
     let icon;
     switch (wheaterState) {
