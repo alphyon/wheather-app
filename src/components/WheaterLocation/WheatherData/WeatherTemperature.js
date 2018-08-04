@@ -9,9 +9,9 @@ import {
     SNOW,
     WINDY
 } from '../../../constants/wheater';
-const stateIconName = wheaterState => {
+const stateIconName = weatherState => {
     let icon;
-    switch (wheaterState) {
+    switch (weatherState) {
         case CLOUD:
             icon = "cloud";
             break;
@@ -36,19 +36,18 @@ const stateIconName = wheaterState => {
     }
     return icon;
 }
-
-const getWeatherIcon = wheaterState => {
-    return (<WheaterIcons className="wicon" name={stateIconName(wheaterState)} size="4x" />)
+const getWeatherIcon = weatherState => {
+    return (<WheaterIcons className="wicon" name={stateIconName(weatherState)} size="4x" />)
 }
-const WeatherTemperature = ({ temperature, wheaterState }) => (
+const WeatherTemperature = ({ temperature, weatherState }) => (
     <div className="wheatherTempCont">
-        {getWeatherIcon(wheaterState)}
+        {getWeatherIcon(weatherState)}
         <span className="temperature">{`${temperature}`}</span>
         <span className="temperatureType">Cº</span>
     </div>
 );
 WeatherTemperature.propTypes ={
     temperature: PropTypes.number.isRequired,
-    wheaterState: PropTypes.string,
+    weatherState: PropTypes.string,
 }
 export default WeatherTemperature;
