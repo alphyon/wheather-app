@@ -7,7 +7,8 @@ import {
     RAIN,
     SUN,
     SNOW,
-    WINDY
+    WINDY,
+    THUNDER
 } from '../../../constants/wheater';
 const stateIconName = weatherState => {
     let icon;
@@ -30,8 +31,11 @@ const stateIconName = weatherState => {
         case WINDY:
             icon = "windy";
             break;
+        case THUNDER:
+            icon = "thunderstorm";
+            break;
         default:
-            icon =  "day-sunny";
+            icon = "day-sunny";
             break;
     }
     return icon;
@@ -46,7 +50,7 @@ const WeatherTemperature = ({ temperature, weatherState }) => (
         <span className="temperatureType">Cº</span>
     </div>
 );
-WeatherTemperature.propTypes ={
+WeatherTemperature.propTypes = {
     temperature: PropTypes.number.isRequired,
     weatherState: PropTypes.string,
 }
