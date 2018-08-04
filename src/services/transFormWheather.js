@@ -2,7 +2,6 @@ import { RAIN, SUN, THUNDER } from "../constants/wheater";
 
 const getWheatherState = wheather => {
     const wheatherStatus = wheather.main;
-    debugger;
     let type;
     if (wheatherStatus === "Rain") {
         type = RAIN;
