@@ -2,12 +2,12 @@ import React from 'react';
 import WeatherTemperature from './WeatherTemperature';
 import WheaterExtraInfo from './WheaterExtraInfo';
 import {
-    CLOUD,
-    CLOUDY,
+    // CLOUD,
+    // CLOUDY,
     RAIN,
-    SUN,
-    SNOW,
-    WINDY
+    // SUN,
+    // SNOW,
+    // WINDY
 } from '../constants/wheater';
 const WeatherData = () => (
     <div>

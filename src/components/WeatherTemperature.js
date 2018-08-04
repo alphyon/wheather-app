@@ -1,5 +1,6 @@
 import React from 'react';
 import WheaterIcons from 'react-weathericons';
+import PropTypes from 'prop-types';
 import {
     CLOUD,
     CLOUDY,
@@ -9,29 +10,31 @@ import {
     WINDY
 } from '../constants/wheater';
 const stateIconName = wheaterState => {
+    let icon;
     switch (wheaterState) {
         case CLOUD:
-            return "cloud";
+            icon = "cloud";
             break;
         case CLOUDY:
-            return "cloudy";
+            icon = "cloudy";
             break;
         case SUN:
-            return "day-sunny";
+            icon = "day-sunny";
             break;
         case RAIN:
-            return "rain";
+            icon = "rain";
             break;
         case SNOW:
-            return "snow";
+            icon = "snow";
             break;
         case WINDY:
-            return "windy";
+            icon = "windy";
             break;
         default:
-            return "day-sunny";
+            icon =  "day-sunny";
             break;
     }
+    return icon;
 }
 
 const getWeatherIcon = wheaterState => {
@@ -43,5 +46,8 @@ const WeatherTemperature = ({ temperature, wheaterState }) => (
         <span>{`${temperature}`}º</span>
     </div>
 );
-
+WeatherTemperature.propTypes ={
+    temperature: PropTypes.number.isRequired,
+    wheaterState: PropTypes.string,
+}
 export default WeatherTemperature;
