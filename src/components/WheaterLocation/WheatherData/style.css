@@ -44,6 +44,7 @@
 }
 
 .wicon{
+    margin-top: 15px;
     color: rgba(255, 136, 0, 1);
     text-shadow: 2px 2px rgba(255, 136, 0, 0.5);
 }
