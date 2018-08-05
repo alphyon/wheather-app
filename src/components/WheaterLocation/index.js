@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import Location from './Location';
 import WeatherData from './WheatherData';
 import transformWheatherData from '../../services/transFormWheather';
+import { ReactDOM } from 'react-dom';
+import { withStyles } from '@material-ui/core/styles';
+import CircularProgress from '@material-ui/core/CircularProgress';
+import purple from '@material-ui/core/colors/purple';
+
+
+
+
 const location = "San Salvador,sv";
 const api_key = "5ac71bb779d2ca403724ea013a90cc40";
 const url = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${api_key}`;
@@ -33,7 +41,7 @@ class WeatherLocation extends Component {
         const { city, data } = this.state;
         return (<div className="weatherLocationCont">
             <Location city={city} />
-            {data ? <WeatherData data={data} />: `Cargando ...`}
+            {data ? <WeatherData data={data} />: <CircularProgress style={{color: purple[500]}} thickness={7}/>}
         </div>)
     };
 }
