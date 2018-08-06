@@ -7,7 +7,7 @@ import purple from '@material-ui/core/colors/purple';
 import { PropTypes } from 'prop-types';
 
 const api_key = "5ac71bb779d2ca403724ea013a90cc40";
-const base_url = "http://api.openweathermap.org/data/2.5/weather"
+const base_url = "https://api.openweathermap.org/data/2.5/weather"
 class WeatherLocation extends Component {
     constructor({ city }) {
         super();
