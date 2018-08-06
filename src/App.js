@@ -8,7 +8,6 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-
 import ForecastExtended from './components/ForecastExtended';
 
 const cities = [
@@ -63,7 +62,7 @@ class App extends Component {
                   {
                     this.state.city ?
                     <ForecastExtended city={this.state.city} /> :
-                    <h2>No seleccion </h2>
+                    null
                   }
               </div>
             </Paper>

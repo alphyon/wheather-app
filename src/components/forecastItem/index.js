@@ -1,17 +1,12 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
 import WeatherData from '../WheaterLocation/WheatherData/index';
-const data = {
-    temperature: 10,
-    weatherState: 'normal',
-    humidity: 5.6,
-    wind: 12,
-}
-const ForecastItem = ({ weekDay, hour }) => (
+
+const ForecastItem = ({ weekDay, hour, data }) => (
     <div>
-        <div>
-            {weekDay} Hora: {hour}
-        </div>
+        <h3>
+            {weekDay} -  Hora: {hour}
+        </h3>
         <div> <WeatherData data={data} /></div>
 
     </div>
