@@ -20,7 +20,6 @@ class WeatherLocation extends Component {
         const { city } = this.state;
         const url = `${base_url}?q=${city}&appid=${api_key}`;
         fetch(url).then(data => {
-            console.log(data);
             return data.json();
         }).then(wheather_data => {
             const data = transformWheatherData(wheather_data);
