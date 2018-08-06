@@ -1,6 +1,7 @@
 .locationList{
     max-height: 85vh;
     overflow: auto;
+    cursor: pointer;
 }
 @media(max-width: 48em){
     .locationList{
