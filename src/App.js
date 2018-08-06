@@ -13,8 +13,6 @@ import ForecastExtended from './components/ForecastExtended';
 const cities = [
   'San Salvador, sv',
   'El Rosario, sv',
-  'Mozzate, it',
-  'Mexico, mx'
 ];
 class App extends Component {
   constructor() {
