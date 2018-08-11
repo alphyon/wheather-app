@@ -13,6 +13,8 @@ import ForecastExtendedContainer from './container/ForecastExtendedContainer';
 const cities = [
   'San Salvador, sv',
   'El Rosario, sv',
+  'Barcelona, es',
+  'Madrid, es',
 ];
 
 class App extends Component {
