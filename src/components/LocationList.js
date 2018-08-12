@@ -9,11 +9,12 @@ const LocationList = ({ cities,onSelectedLocation }) => {
         onSelectedLocation(city);
     }
     const strToComponents = (cities) => (
-        cities.map((city, i) => (
+        cities.map((city) => (
             <WeatherLocation
-                key={i}
-                city={city}
-                wheatherLocationClick={() => handleWheatherLocationClick(city)}
+                key={city.key}
+                city={city.name}
+                wheatherLocationClick={() => handleWheatherLocationClick(city.name)}
+                data = {city.data}
             />
         ))
     )
